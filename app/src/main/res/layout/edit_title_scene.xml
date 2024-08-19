@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sceneRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_theme_background"
+    android:orientation="vertical"
+    android:textAlignment="center">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/titleName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="@android:color/primary_text_dark_nodisable" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seasons Watched"
+            android:textAlignment="center"
+            android:textColor="@android:color/primary_text_dark_nodisable" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/addSeasonInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:ems="10"
+                android:hint="Enter number/range here"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/primary_text_dark_nodisable"
+                android:textColorHint="@android:color/secondary_text_dark_nodisable" />
+
+            <Button
+                android:id="@+id/addSeasonButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="ADD"
+                android:textColor="@android:color/primary_text_dark_nodisable" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/unwatchedEpisode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:clickable="true"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/done_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

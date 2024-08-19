@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dark_theme_background"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title Name: "
+            android:textColor="@android:color/primary_text_dark_nodisable" />
+
+        <TextView
+            android:id="@+id/seasons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Watched Seasons: "
+            android:textColor="@android:color/primary_text_dark_nodisable" />
+
+        <TextView
+            android:id="@+id/episodes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Finished Episodes: "
+            android:textColor="@android:color/primary_text_dark_nodisable" />
+
+        <LinearLayout
+            android:id="@+id/episodeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/editButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:scaleType="center"
+        android:scaleX="0.6"
+        android:scaleY="0.6"
+        app:backgroundTint="@color/dark_theme_secondary"
+        app:srcCompat="@drawable/edit_icon" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/deleteTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:scaleType="center"
+        android:scaleX="0.6"
+        android:scaleY="0.6"
+        app:backgroundTint="@color/dark_theme_secondary"
+        app:srcCompat="@drawable/delete_icon" />
+
+</android.widget.LinearLayout>
